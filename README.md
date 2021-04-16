@@ -1,1 +1,2 @@
-# Leroy-Merlin-startpage
+# Начальная страница приложения Леруа Мерлен  
+## Ни Эдуард | nieduard_01@mail.ru
