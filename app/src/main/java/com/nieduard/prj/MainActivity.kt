@@ -3,12 +3,8 @@ package com.nieduard.prj
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.ListFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.nieduard.fragments.CartFragment
-import com.nieduard.fragments.MainFragment
-import com.nieduard.fragments.ProfileFragment
-import com.nieduard.fragments.StoresFragment
+import com.nieduard.fragments.*
 import java.security.InvalidParameterException
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         navigationBar.setOnNavigationItemSelectedListener {
             val frag = when (it.itemId) {
                 R.id.main -> MainFragment()
-                R.id.list -> ListFragment()
+                R.id.list -> MyListFragment()
                 R.id.shops -> StoresFragment()
                 R.id.profile -> ProfileFragment()
                 R.id.cart -> CartFragment()

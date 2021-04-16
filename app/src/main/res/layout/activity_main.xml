@@ -16,12 +16,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:attr/windowBackground"
-        app:itemBackground="#с9с9с9"
-        app:itemIconTint="#383838"
-        app:itemTextColor="#383838"
+        android:backgroundTint="#37d134"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/bottom_nav_item_color"
+        app:itemTextColor="@drawable/bottom_nav_item_color"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:itemRippleColor="#383838"
         app:menu="@menu/nav_menu" />
 
 

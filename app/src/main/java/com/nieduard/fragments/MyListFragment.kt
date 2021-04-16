@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.nieduard.prj.R
 
-class ListFragment : Fragment() {
+class MyListFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
