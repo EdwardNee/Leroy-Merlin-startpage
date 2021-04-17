@@ -11,16 +11,15 @@ import com.nieduard.prj.R
 /**
  * Adapter for catalog menu.
  */
-class CatalogAdapter(private val catalogList : List<CatalogData>) : RecyclerView.Adapter<MainViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-        return MainViewHolder(
+class CatalogAdapter(private val catalogList : List<CatalogData>) : RecyclerView.Adapter<CatalogViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatalogViewHolder {
+        return CatalogViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.view_holder_catalog, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CatalogViewHolder, position: Int) {
         val currItem = catalogList[position]
-
         holder.imageView.setImageResource(currItem.imageResource)
     }
 
@@ -28,6 +27,9 @@ class CatalogAdapter(private val catalogList : List<CatalogData>) : RecyclerView
 
 }
 
-class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+/**
+ * ViewHolder to hold the data.
+ */
+class CatalogViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val imageView: ImageView = itemView.findViewById(R.id.cat_image)
 }

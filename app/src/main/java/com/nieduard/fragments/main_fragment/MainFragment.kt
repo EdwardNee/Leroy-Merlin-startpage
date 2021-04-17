@@ -12,6 +12,15 @@ import com.nieduard.prj.R
 
 class MainFragment : Fragment() {
 
+    /**
+     * Catalog images.
+     */
+    private val list = listOf(
+        CatalogData(R.drawable.h1),
+        CatalogData(R.drawable.h2),
+        CatalogData(R.drawable.h3)
+    )
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,17 +31,12 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //Init holder.
         view.findViewById<RecyclerView>(R.id.rv_cat).apply {
-            //Set a grid: views will be in a 2 columns
+            //Set a grid: views will be in a horizontal line
             layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
             //Instantiate adapter for recycler
-            val list = listOf<CatalogData>(
-                CatalogData(R.drawable.h1),
-                CatalogData(R.drawable.h2),
-                CatalogData(R.drawable.h3)
-            )
             val adapter = CatalogAdapter(list)
-            //addItemDecoration(CharacterItemDecoration(50))
             this.adapter = adapter
         }
     }
