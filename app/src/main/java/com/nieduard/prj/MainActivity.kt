@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.nieduard.fragments.*
+import com.nieduard.fragments.main_fragment.MainFragment
 import java.security.InvalidParameterException
 
 class MainActivity : AppCompatActivity() {

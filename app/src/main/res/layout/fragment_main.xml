@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nieduard.fragments.MainFragment">
+    tools:context="com.nieduard.fragments.main_fragment.MainFragment">
 
     <ImageView
         android:id="@+id/green_layer"
