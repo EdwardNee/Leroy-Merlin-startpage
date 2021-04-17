@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="0dp"
+    android:paddingEnd="32dp">
+
+    <TextView
+        android:id="@+id/r_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:breakStrategy="balanced"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/string_name"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/r_image"
+        app:layout_constraintStart_toStartOf="@id/r_price"
+        app:layout_constraintTop_toBottomOf="@id/r_price" />
+
+    <TextView
+        android:id="@+id/r_price"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:breakStrategy="balanced"
+        android:text="@string/string_price"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="1:0.2"
+        app:layout_constraintEnd_toEndOf="@id/r_image"
+        app:layout_constraintStart_toStartOf="@id/r_image"
+        app:layout_constraintTop_toBottomOf="@id/r_image" />
+
+    <ImageView
+        android:id="@+id/r_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="6dp"
+        android:adjustViewBounds="true"
+
+        android:scaleType="fitCenter"
+        android:src="@drawable/perforator"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
