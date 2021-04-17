@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.nieduard.data.CatalogData
+import com.nieduard.data.LastViewedData
 import com.nieduard.prj.R
 
 class MainFragment : Fragment() {
@@ -15,10 +16,16 @@ class MainFragment : Fragment() {
     /**
      * Catalog images.
      */
-    private val list = listOf(
+    private val catalogList = listOf(
         CatalogData(R.drawable.h1),
         CatalogData(R.drawable.h2),
         CatalogData(R.drawable.h3)
+    )
+
+    private val recentList = listOf(
+        LastViewedData(R.drawable.laminate, 930.6, "Ламинат Artens \"Тангай\" 33 класс толщина 8 мм 1.986"),
+        LastViewedData(R.drawable.perforator, 4998.0, "Перфоратор SDS-plus Dexter Power Z1C-HW-2662SREP, 800 Вт, 3 Дж"),
+        LastViewedData(R.drawable.wallpaper, 1737.0, "Обои флизелиновые Erismann Paradiso бежевые 1.06 м 3040-2")
     )
 
     override fun onCreateView(
@@ -36,7 +43,15 @@ class MainFragment : Fragment() {
             //Set a grid: views will be in a horizontal line
             layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
             //Instantiate adapter for recycler
-            val adapter = CatalogAdapter(list)
+            val adapter = CatalogAdapter(catalogList)
+            this.adapter = adapter
+        }
+
+        view.findViewById<RecyclerView>(R.id.rv_recent).apply {
+            //Set a grid: views will be in a horizontal line
+            layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+            //Instantiate adapter for recycler
+            val adapter = LastViewedAdapter(recentList)
             this.adapter = adapter
         }
     }

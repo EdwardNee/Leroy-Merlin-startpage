@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Leroy Merlen</string>
-    <string name="string_price">%d ₽/шт.</string>
+    <string name="string_price">%.2f ₽/шт.</string>
     <string name="string_name">%s</string>
 </resources>
