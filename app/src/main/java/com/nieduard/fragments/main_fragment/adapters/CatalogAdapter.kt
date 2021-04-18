@@ -1,4 +1,4 @@
-package com.nieduard.fragments.main_fragment
+package com.nieduard.fragments.main_fragment.adapters
 
 import android.view.LayoutInflater
 import android.view.View

@@ -33,7 +33,7 @@
 
         <SearchView
             android:id="@+id/searchView"
-            android:layout_width="300dp"
+            android:layout_width="310dp"
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/corners"
@@ -79,6 +79,18 @@
             app:layout_constraintLeft_toLeftOf="@id/root_left_VGL"
             app:layout_constraintTop_toBottomOf="@id/rv_cat" />
 
+        <TextView
+            android:id="@+id/restricted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Предложение ограничено"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/root_left_VGL"
+            app:layout_constraintTop_toBottomOf="@id/rv_recent" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_cat"
             android:layout_width="0dp"
@@ -96,6 +108,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/root_left_VGL"
             app:layout_constraintTop_toBottomOf="@id/recent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_restricted"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/root_left_VGL"
+            app:layout_constraintTop_toBottomOf="@id/restricted" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/g_GL"
