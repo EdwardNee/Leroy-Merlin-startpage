@@ -1,80 +1,130 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.nieduard.fragments.main_fragment.MainFragment">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/green_layer"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="#32CD32"
-        app:layout_constraintBottom_toBottomOf="@id/g_GL"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#32CD32"
-        android:text="Поиск товаров"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/green_layer"
-        app:layout_constraintLeft_toLeftOf="@id/root_left_VGL"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/white"
+        tools:context="com.nieduard.fragments.main_fragment.MainFragment">
 
-    <TextView
-        android:id="@+id/recent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Недавно просмотренные"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintLeft_toLeftOf="@id/root_left_VGL"
-        app:layout_constraintTop_toBottomOf="@id/rv_cat" />
+        <ImageView
+            android:id="@+id/green_layer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#32CD32"
+            app:layout_constraintBottom_toBottomOf="@id/g_GL"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_cat"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/root_left_VGL"
-        app:layout_constraintTop_toBottomOf="@id/g_GL" />
+        <TextView
+            android:id="@+id/search_tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#32CD32"
+            android:text="Поиск товаров"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/g_half"
+            app:layout_constraintLeft_toLeftOf="@id/root_left_VGL" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_recent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/root_left_VGL"
-        app:layout_constraintTop_toBottomOf="@id/recent" />
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/corners"
+            android:focusable="false"
+            android:iconifiedByDefault="false"
+            android:queryHint="Поиск"
+            app:layout_constraintRight_toLeftOf="@id/code"
+            app:layout_constraintStart_toStartOf="@id/root_left_VGL"
+            app:layout_constraintTop_toBottomOf="@id/g_half" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/g_GL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        <ImageView
+            android:id="@+id/code"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/corners"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@id/root_right_VGL"
+            app:layout_constraintStart_toEndOf="@id/searchView"
+            app:layout_constraintTop_toBottomOf="@id/g_half" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/root_left_VGL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/root_right_VGL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:foregroundGravity="center"
+            android:src="@drawable/barcode"
+            app:layout_constraintBottom_toBottomOf="@id/code"
+            app:layout_constraintEnd_toEndOf="@id/code"
+            app:layout_constraintStart_toStartOf="@id/code"
+            app:layout_constraintTop_toTopOf="@id/code" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/recent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Недавно просмотренные"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/root_left_VGL"
+            app:layout_constraintTop_toBottomOf="@id/rv_cat" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/root_left_VGL"
+            app:layout_constraintTop_toBottomOf="@id/g_GL" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/root_left_VGL"
+            app:layout_constraintTop_toBottomOf="@id/recent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_GL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/root_left_VGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/root_right_VGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_half"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.125" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

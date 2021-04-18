@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.nieduard.data.LastViewedData
-import com.nieduard.prj.R
+import com.nieduard.main_class.R
 
 /**
  * Adapter for recently viewed items in main fragment.

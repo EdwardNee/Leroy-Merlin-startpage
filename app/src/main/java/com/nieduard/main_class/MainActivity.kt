@@ -1,4 +1,4 @@
-package com.nieduard.prj
+package com.nieduard.main_class
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
     private fun moveToFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fl_wrapper, fragment)
-            .addToBackStack(fragment.javaClass.name)
             .commit()
     }
 }

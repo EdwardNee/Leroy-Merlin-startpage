@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.nieduard.data.CatalogData
-import com.nieduard.prj.R
+import com.nieduard.main_class.R
 
 /**
  * Adapter for catalog menu.

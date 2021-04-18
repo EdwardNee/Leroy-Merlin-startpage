@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.nieduard.prj.R
+import com.nieduard.main_class.R
 
 class ProfileFragment : Fragment() {
 
